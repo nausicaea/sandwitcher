@@ -7,6 +7,7 @@ import gzip
 
 import click
 
+from ._version import get_versions
 
 @click.command()
 @click.option("-c", "--capitalize", is_flag=True, help="Capitalize the first letter of each word.")
@@ -17,6 +18,7 @@ import click
 @click.option("-f", "--first-interstitial", type=str, default="", help="The first insterstitial string.")
 @click.option("-s", "--second-interstitial", type=str, default="", help="The second insterstitial string.")
 @click.option("-e", "--end", type=str, default="", help="The end of the password.")
+@click.version_option(get_versions()["version"])
 def main(capitalize, word_length, word_number, word_delimiter, beginning, first_interstitial, second_interstitial, end):
     """
     Generate a sandwich password from random words.

@@ -9,6 +9,7 @@ import click
 
 from ._version import get_versions
 
+
 @click.command()
 @click.option("-c", "--capitalize", is_flag=True, help="Capitalize the first letter of each word.")
 @click.option("-l", "--word-length", type=int, default=5, help="The length of words to use.")
@@ -36,9 +37,9 @@ def main(capitalize, word_length, word_number, word_delimiter, beginning, first_
             else:
                 final_words.append(random.choice(word_selection))
 
-        print("{}{}{}{}{}".format(beginning, first_interstitial, word_delimiter.join(final_words), second_interstitial, end))
+        click.echo("{}{}{}{}{}".format(beginning, first_interstitial, word_delimiter.join(final_words), second_interstitial, end))
     else:
-        print("No words of that length available.")
+        click.echo("No words of that length available.")
 
 
 if __name__ == "__main__":

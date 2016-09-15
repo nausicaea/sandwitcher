@@ -78,6 +78,9 @@ if __name__ == "__main__":
         install_requires=[
             "click"
         ],
+        test_requires=[
+            "pytest"
+        ],
         entry_points={
             "console_scripts": [
                 "sandwitcher = sandwitcher.main:main"

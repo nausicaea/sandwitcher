@@ -17,7 +17,6 @@ LONG_DESCRIPTION = ""
 DIST_NAME = "sandwitcher"
 LICENSE = "MIT"
 AUTHOR = "Eleanore C. Young"
-EMAIL = ""
 URL = ""
 DOWNLOAD_URL = ""
 CLASSIFIERS = [
@@ -64,7 +63,6 @@ if __name__ == "__main__":
     setup(
         name=DIST_NAME,
         author=AUTHOR,
-        author_email=EMAIL,
         description=DESCRIPTION,
         license=LICENSE,
         url=URL,
